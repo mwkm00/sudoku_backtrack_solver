@@ -23,8 +23,8 @@ int check_valid(int x, int y, int number, int board[9][9]){
             return 0;
     }
 
-    for (int i = (y/3)*3; i < ((y/3)*3)+3; i++) //check 3x3 box
-        for (int j = (x/3)*3; j < ((x/3)*3)+3; j++){
+    for (int i = (x/3)*3; i < ((x/3)*3)+3; i++) //check 3x3 box
+        for (int j = (y/3)*3; j < ((y/3)*3)+3; j++){
             if (board[i][j] == number && (i != y && j != x)){
                 return 0;
             }
